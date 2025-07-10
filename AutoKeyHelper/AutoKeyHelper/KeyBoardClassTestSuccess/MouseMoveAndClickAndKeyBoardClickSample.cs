@@ -208,7 +208,7 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
 
             Thread.Sleep(1000);
             // init position
-            Move(3000, VK_LEFT);
+            Move(4000, VK_LEFT);
             Move(6400, VK_RIGHT);
             Move(100, VK_LEFT);
 
@@ -355,6 +355,8 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         public void ArmyReturnTop_ClickMarketButton()
         {
             SetCursorPos(1450, 1040);
+            SetCursorPos(1450, 1040);
+            Thread.Sleep(50);
             // 模擬滑鼠左鍵點擊
             mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
             mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
@@ -363,7 +365,10 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
 
         public void ArmyReturnTop_LeaveGlobalMarket()
         {
-            MoveToPortal(6000, VK_LEFT, 330);
+            // escape move lock
+            Thread.Sleep(10000);
+            Move(10000, VK_LEFT);
+            MoveToPortal(2500, VK_RIGHT, 330);
 
         }
 
