@@ -8,19 +8,24 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\nassi\\.nuget\\packages\\": {}
+    "C:\\Users\\nassimcoding\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
+      "projectUniqueName": "D:\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
       "projectName": "AutoKeyHelper",
-      "projectPath": "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
-      "packagesPath": "C:\\Users\\nassi\\.nuget\\packages\\",
-      "outputPath": "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\obj\\",
+      "projectPath": "D:\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
+      "packagesPath": "C:\\Users\\nassimcoding\\.nuget\\packages\\",
+      "outputPath": "D:\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nassi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nassimcoding\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -70,7 +75,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
