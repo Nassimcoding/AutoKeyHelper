@@ -39,3 +39,4 @@ D:\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\obj\Debug\net8.0-wind
 D:\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\obj\Debug\net8.0-windows\AutoKeyHelper.pdb
 D:\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\obj\Debug\net8.0-windows\AutoKeyHelper.genruntimeconfig.cache
 D:\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\obj\Debug\net8.0-windows\ref\AutoKeyHelper.dll
+D:\work\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\obj\Debug\net8.0-windows\AutoKeyHelper.sourcelink.json

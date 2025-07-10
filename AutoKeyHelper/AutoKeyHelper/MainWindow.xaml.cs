@@ -45,7 +45,17 @@ namespace AutoKeyHelper
         private void MoveMouseToCenter_Click(object sender, RoutedEventArgs e)
         {
             var test = new MouseMoveAndClickAndKeyBoardClickSample();
-            test.MouseAndKeyboardTest(sender,e);
+            test.ScriptTest1(sender,e);
+        }
+
+        private void MoveMouseToMarketTest(object sender, RoutedEventArgs e)
+        {
+
+            var test = new MouseMoveAndClickAndKeyBoardClickSample();
+            test.MoveMouseToMarketTest(sender, e);
+
+
+
         }
 
 
