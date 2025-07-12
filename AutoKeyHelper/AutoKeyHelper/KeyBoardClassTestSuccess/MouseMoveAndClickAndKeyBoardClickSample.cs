@@ -129,7 +129,7 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
 
                 ArmyReturnTop_ToSafeZone_GlobalMarket();
 
-                ArmyReturnTop_ClickMarketButton();
+                ArmyReturnTop_ClickMarketButton_ForLaptop();
 
                 ArmyReturnTop_LeaveGlobalMarket();
             }
@@ -137,7 +137,28 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         }
 
 
+        public void Zone1Metrol3_v1(object sender, RoutedEventArgs e)
+        {
+            // 取得主要螢幕的解析度
+            var screenWidth = SystemParameters.PrimaryScreenWidth;
+            var screenHeight = SystemParameters.PrimaryScreenHeight;
 
+            // 計算正中央的座標
+            int centerX = (int)(screenWidth / 2);
+            int centerY = (int)(screenHeight / 2);
+
+            // 移動滑鼠
+            SetCursorPos(centerX, centerY);
+            // 模擬滑鼠左鍵點擊
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
+
+            while (true)
+            {
+                BigGhost_V2();
+            }
+
+        }
 
 
         public void MoveMouseToMarketTest(object sender, RoutedEventArgs e)
@@ -161,17 +182,40 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
 
             Thread.Sleep(1000);
 
-            ArmyReturnTop_ClimbToLadder();
-
-            ArmyReturnTop_ToSafeZone_GlobalMarket();
-
-            ArmyReturnTop_ClickMarketButton();
-
-            ArmyReturnTop_LeaveGlobalMarket();
-
+            ArmyReturnTop_ClickMarketButton_ForLaptop();
         }
 
+        public void BigGhost1()
+        {
+            //LEFT TO RIGHT
+            FlashAndAttackOrHeal(17600,VK_RIGHT);
+            FlashAndAttackOrHeal(2400,VK_LEFT);
+            StandingAttackOrHeal(2);
+            // GET RIGHT CORNER ITEM
+            FlashAndAttackOrHeal(1600,VK_RIGHT);
+            // WAIT
+            Thread.Sleep(30000);
+            //RIGHT TO LEFT
+            FlashAndAttackOrHeal(17600,VK_LEFT);
+            FlashAndAttackOrHeal(2400,VK_RIGHT);
+            StandingAttackOrHeal(2);
+            // GET LEFT CORNER ITEM
+            FlashAndAttackOrHeal(1600, VK_LEFT);
+            // WAIT
+            Thread.Sleep(30000);
+        }
 
+        public void BigGhost_V2()
+        {
+            //LEFT TO RIGHT
+            FlashAndAttackOrHeal(17600, VK_RIGHT);
+            FlashAndAttackOrHeal(1000, VK_LEFT);
+            StandingAttackOrHeal(1);
+            // GET RIGHT CORNER ITEM
+            FlashAndAttackOrHeal(1000, VK_RIGHT);
+            // MOVE TO FIRST
+            Move(30000, VK_LEFT);
+        }
 
 
 
@@ -352,8 +396,23 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         }
 
 
-        public void ArmyReturnTop_ClickMarketButton()
+        public void ArmyReturnTop_ClickMarketButton_ForLaptop()
         {
+            // 1280 X 720
+            SetCursorPos(950, 700);
+            SetCursorPos(950, 700);
+            Thread.Sleep(50);
+            // 模擬滑鼠左鍵點擊
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
+
+        }
+
+
+
+        public void ArmyReturnTop_ClickMarketButton_ForDesktop()
+        {
+            // for 1920 X 1080 
             SetCursorPos(1450, 1040);
             SetCursorPos(1450, 1040);
             Thread.Sleep(50);
@@ -362,6 +421,7 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
             mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
 
         }
+
 
         public void ArmyReturnTop_LeaveGlobalMarket()
         {

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj": {}
+    "D:\\autokeyhelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj": {}
   },
   "projects": {
-    "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj": {
+    "D:\\autokeyhelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
+        "projectUniqueName": "D:\\autokeyhelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
         "projectName": "AutoKeyHelper",
-        "projectPath": "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
+        "projectPath": "D:\\autokeyhelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper.csproj",
         "packagesPath": "C:\\Users\\nassi\\.nuget\\packages\\",
-        "outputPath": "D:\\work\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\obj\\",
+        "outputPath": "D:\\autokeyhelper\\AutoKeyHelper\\AutoKeyHelper\\AutoKeyHelper\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\workfile\\visualstidio\\share\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\nassi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -64,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

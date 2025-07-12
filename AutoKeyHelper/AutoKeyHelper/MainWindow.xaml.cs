@@ -58,6 +58,17 @@ namespace AutoKeyHelper
 
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            var test = new MouseMoveAndClickAndKeyBoardClickSample();
+            test.Zone1Metrol3_v1(sender, e);
+        }
+
 
 
         //private const uint INPUT_KEYBOARD = 1;

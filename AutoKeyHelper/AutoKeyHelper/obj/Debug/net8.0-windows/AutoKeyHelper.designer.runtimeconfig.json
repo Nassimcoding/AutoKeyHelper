@@ -13,10 +13,12 @@
     ],
     "additionalProbingPaths": [
       "C:\\Users\\nassi\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\nassi\\.nuget\\packages"
+      "C:\\Users\\nassi\\.nuget\\packages",
+      "D:\\workfile\\visualstidio\\share\\NuGetPackages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
+      "CSWINRT_USE_WINDOWS_UI_XAML_PROJECTIONS": false,
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
     }
   }

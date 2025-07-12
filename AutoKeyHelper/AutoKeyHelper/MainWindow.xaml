@@ -5,17 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoKeyHelper"
         mc:Ignorable="d"
-        Title="MainWindow" Height="960" Width="1600">
-    <Grid>
-        <TextBox Name="OutputTextBox" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Height="50"/>
-        <Button Content="模擬輸入 A" Width="120" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,20" Click="Button_Click"/>
+        Title="MainWindow" Height="210" Width="461">
+    <Grid Margin="0,0,0,40">
 
         <Button Content="移動滑鼠到螢幕正中央"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Click="MoveMouseToCenter_Click" Margin="309,728,0,0"/>
+                Click="MoveMouseToCenter_Click" Margin="10,10,0,0" Height="74" Width="146"/>
 
-        <Button Content="MarketTest" HorizontalAlignment="Left" Margin="1095,738,0,0" VerticalAlignment="Top" Click="MoveMouseToMarketTest"/>
+        <Button Content="MarketTest" HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Click="MoveMouseToMarketTest" Height="74" Width="112"/>
+        <Button Content="MTest" HorizontalAlignment="Left" Height="74" Margin="298,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="131" Click="Button_Click_1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Button" HorizontalAlignment="Left" Height="33" Margin="57,111,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.58,0.638" Click="Button_Click_2"/>
 
 
     </Grid>
