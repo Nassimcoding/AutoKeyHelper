@@ -14,7 +14,7 @@
                 Click="MoveMouseToCenter_Click" Margin="10,10,0,0" Height="74" Width="92"/>
 
         <Button Content="MarketTest" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Click="MoveMouseToMarketTest" Height="74" Width="112"/>
-        <Button Content="MTest" HorizontalAlignment="Left" Height="74" Margin="277,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="108" Click="Button_Click_1">
+        <Button Content="CanvasTest" HorizontalAlignment="Left" Height="74" Margin="277,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="108" Click="CanvasAddTrangleTest">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -25,10 +25,12 @@
             </Button.RenderTransform>
         </Button>
         <Button Content="Metrol3" HorizontalAlignment="Left" Height="65" Margin="11,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.58,0.638" Click="Button_Click_2" Width="91"/>
-        <ListBox d:ItemsSource="{d:SampleData ItemCount=3}" Margin="160,114,117,145"/>
-        <Canvas x:Name="MainCanvas" Margin="188,127,55,93" Background="LightGray">
-            <ScrollViewer Height="149" Width="339" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        </Canvas>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Auto"
+              VerticalScrollBarVisibility="Disabled"
+              Height="200" Width="400" Margin="160,121,22,47">
+            <Canvas x:Name="MainCanvas" Background="LightGray" Height="200" Width="800"/>
+        </ScrollViewer>
 
 
 

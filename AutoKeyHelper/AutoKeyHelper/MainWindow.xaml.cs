@@ -13,6 +13,7 @@ using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using AutoKeyHelper.keyboard;
 using AutoKeyHelper.KeyBoardClassTestSuccess;
+using AutoKeyHelper.Canvas;
 
 namespace AutoKeyHelper
 {
@@ -58,42 +59,10 @@ namespace AutoKeyHelper
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void CanvasAddTrangleTest(object sender, RoutedEventArgs e)
         {
-            //Size rsize = new Size(100, 100);
-            //Rect TimeCube = new Rect(rsize);
-            //TimeCube.Size = rsize;
-
-            double canvasWidth = MainCanvas.ActualWidth;
-            double canvasHeight = MainCanvas.ActualHeight;
-
-            Rectangle rect = new Rectangle();
-            rect.Width = 100;
-            rect.Height = 100;
-            rect.Fill = Brushes.Red;
-            rect.Tag = "z";
-
-
-            // 避免 Canvas 還沒 render 出來
-            if (canvasWidth == 0 || canvasHeight == 0)
-            {
-                MainCanvas.UpdateLayout(); // 強制刷新 Layout
-                canvasWidth = MainCanvas.ActualWidth;
-                canvasHeight = MainCanvas.ActualHeight;
-            }
-
-            double posX = canvasWidth * 0.1;  // 50% 寬
-            double posY = canvasHeight * 0.1; // 30% 高
-
-            System.Windows.Controls.Canvas.SetLeft(rect, posX);
-            System.Windows.Controls.Canvas.SetTop(rect, posY);
-
-
-
-            MainCanvas.Children.Add(rect);
-
-
-
+            var test = new TestCanvasShow();
+            test.CanvasScrollTest(MainCanvas);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
