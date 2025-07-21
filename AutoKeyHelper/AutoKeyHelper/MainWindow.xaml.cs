@@ -14,6 +14,10 @@ using System.Threading.Tasks;
 using AutoKeyHelper.keyboard;
 using AutoKeyHelper.KeyBoardClassTestSuccess;
 using AutoKeyHelper.Canvas;
+using AutoKeyHelper.VisionProcess;
+
+
+
 
 namespace AutoKeyHelper
 {
@@ -69,6 +73,13 @@ namespace AutoKeyHelper
         {
             var test = new MouseMoveAndClickAndKeyBoardClickSample();
             test.Zone1Metrol3_v1(sender, e);
+        }
+
+        private void StartGetPoint_Click(object sender, RoutedEventArgs e)
+        {
+            var test = new GetPythonData();
+            test.GetVisionLocation(WritingB);
+            //WritingB.Text = "failed";
         }
 
 

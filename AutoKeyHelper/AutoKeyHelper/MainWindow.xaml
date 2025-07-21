@@ -31,6 +31,8 @@
               Height="200" Width="400" Margin="160,121,22,47">
             <Canvas x:Name="MainCanvas" Background="LightGray" Height="200" Width="800"/>
         </ScrollViewer>
+        <Button x:Name="StartGetPoint" Content="Button" HorizontalAlignment="Left" Height="63" Margin="11,159,0,0" VerticalAlignment="Top" Width="91" Click="StartGetPoint_Click"/>
+        <TextBox x:Name="WritingB" HorizontalAlignment="Left" Height="95" Margin="11,227,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="328"/>
 
 
 
