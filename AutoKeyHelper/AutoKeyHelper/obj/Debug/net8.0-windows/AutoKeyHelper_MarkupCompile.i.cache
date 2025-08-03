@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\obj\Debug\net8.0-windows\
+D:\work\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\obj\Debug\net8.0-windows\
 AutoKeyHelper
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-D:\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\App.xaml
+D:\work\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\AutoKeyHelper\App.xaml
 11407045341
 
 10291275294
-198-556154604
+198-1509178875
 MainWindow.xaml;
 
-False
+True
 

@@ -161,7 +161,35 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         }
 
 
-        public void MoveMouseToMarketTest(object sender, RoutedEventArgs e)
+
+        public void ZombieMine2_v1(object sender, RoutedEventArgs e)
+        {
+            // 取得主要螢幕的解析度
+            var screenWidth = SystemParameters.PrimaryScreenWidth;
+            var screenHeight = SystemParameters.PrimaryScreenHeight;
+
+            // 計算正中央的座標
+            int centerX = (int)(screenWidth / 2);
+            int centerY = (int)(screenHeight / 2);
+
+            // 移動滑鼠
+            SetCursorPos(centerX, centerY);
+            // 模擬滑鼠左鍵點擊
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
+
+
+
+            while (true)
+            {
+                ZombieLayer1_V1();
+            }
+
+
+        }
+
+
+            public void MoveMouseToMarketTest(object sender, RoutedEventArgs e)
         {
             //init
             // 取得主要螢幕的解析度
@@ -218,7 +246,15 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         }
 
 
-
+        public void ZombieLayer1_V1()
+        {
+            //RIGHT TO LEFT
+            MoveAndAttackOrHeal(40, VK_LEFT);
+            Thread.Sleep(1500);
+            //LEFT TO RIGHT 
+            MoveAndAttackOrHeal(40, VK_RIGHT);
+            Thread.Sleep(1500);
+        }
 
 
         public void ArmyTopLayer1()
@@ -497,10 +533,10 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
             keybd_event(direct, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
         }
 
-        public void MoveAndAttackOrHeal(int time, byte direct)
+        public void MoveAndAttackOrHeal(int times, byte direct)
         {
             keybd_event(direct, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero); // Key Down
-            StandingAttackOrHeal(time);
+            StandingAttackOrHeal(times);
             keybd_event(direct, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
         }
 

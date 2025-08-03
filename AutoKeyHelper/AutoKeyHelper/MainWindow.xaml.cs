@@ -82,6 +82,12 @@ namespace AutoKeyHelper
             //WritingB.Text = "failed";
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var test = new MouseMoveAndClickAndKeyBoardClickSample();
+            test.ZombieMine2_v1(sender, e);
+        }
+
 
 
         //private const uint INPUT_KEYBOARD = 1;

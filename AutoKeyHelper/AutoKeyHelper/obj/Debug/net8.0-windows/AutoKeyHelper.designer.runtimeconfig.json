@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\nassimcoding\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\nassimcoding\\.nuget\\packages",
-      "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      "C:\\Users\\nassi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\nassi\\.nuget\\packages"
     ],
     "configProperties": {
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": true,
