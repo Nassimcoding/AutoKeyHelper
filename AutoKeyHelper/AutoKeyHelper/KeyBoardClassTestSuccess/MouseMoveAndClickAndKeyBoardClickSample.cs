@@ -29,8 +29,10 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         private const uint KEYEVENTF_KEYUP = 0x0002;
         private const byte VK_RETURN = 0x0D; // Enter 鍵的虛擬鍵碼
         private const byte VK_Z = 0x5A; // Z 鍵的虛擬鍵碼
+        private const byte VK_V = 0x56; // C 鍵的虛擬鍵碼
         private const byte VK_D = 0x44; // D 鍵的虛擬鍵碼
-        private const byte VK_C = 0x43; // D 鍵的虛擬鍵碼
+        private const byte VK_C = 0x43; // C 鍵的虛擬鍵碼
+        private const byte VK_B = 0x42; // B 鍵的虛擬鍵碼
 
         private const byte VK_UP = 0x26;
         private const byte VK_DOWN = 0x28;
@@ -180,16 +182,18 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
 
 
 
-            while (true)
+            for (int i = 0; i < 25; i++)
             {
                 ZombieLayer1_V1();
             }
+            ArmyReturnTop_ToSafeZone_GlobalMarket();
 
+            ArmyReturnTop_ClickMarketButton_ForLaptop();
 
         }
 
 
-            public void MoveMouseToMarketTest(object sender, RoutedEventArgs e)
+        public void MoveMouseToMarketTest(object sender, RoutedEventArgs e)
         {
             //init
             // 取得主要螢幕的解析度
@@ -216,16 +220,16 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         public void BigGhost1()
         {
             //LEFT TO RIGHT
-            FlashAndAttackOrHeal(17600,VK_RIGHT);
-            FlashAndAttackOrHeal(2400,VK_LEFT);
+            FlashAndAttackOrHeal(17600, VK_RIGHT);
+            FlashAndAttackOrHeal(2400, VK_LEFT);
             StandingAttackOrHeal(2);
             // GET RIGHT CORNER ITEM
-            FlashAndAttackOrHeal(1600,VK_RIGHT);
+            FlashAndAttackOrHeal(1600, VK_RIGHT);
             // WAIT
             Thread.Sleep(30000);
             //RIGHT TO LEFT
-            FlashAndAttackOrHeal(17600,VK_LEFT);
-            FlashAndAttackOrHeal(2400,VK_RIGHT);
+            FlashAndAttackOrHeal(17600, VK_LEFT);
+            FlashAndAttackOrHeal(2400, VK_RIGHT);
             StandingAttackOrHeal(2);
             // GET LEFT CORNER ITEM
             FlashAndAttackOrHeal(1600, VK_LEFT);
@@ -470,8 +474,87 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
 
 
 
+        public void ToyCityCloudDeck(object sender, RoutedEventArgs e)
+        {
+
+            // 取得主要螢幕的解析度
+            var screenWidth = SystemParameters.PrimaryScreenWidth;
+            var screenHeight = SystemParameters.PrimaryScreenHeight;
+
+            // 計算正中央的座標
+            int centerX = (int)(screenWidth / 2);
+            int centerY = (int)(screenHeight / 2);
+
+            // 移動滑鼠
+            SetCursorPos(centerX, centerY);
+            // 模擬滑鼠左鍵點擊
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
 
 
+            while (true)
+            {
+                FlashMoveHolyLight(10000, VK_LEFT);
+                FlashMoveHolyLight(1500, VK_RIGHT);
+
+                FlashMoveHolyLight(1200, VK_UP);
+
+                FlashMoveHolyLight(2000, VK_RIGHT);
+                FlashMoveHolyLight(2000, VK_LEFT);
+
+                FlashMoveHolyLight(1200, VK_DOWN);
+
+                FlashMoveHolyLight(10000, VK_RIGHT);
+                FlashMoveHolyLight(1200, VK_LEFT);
+
+                FlashMoveHolyLight(2500, VK_UP);
+
+                FlashMoveHolyLight(2000, VK_RIGHT);
+
+                FlashMoveHolyLight(2000, VK_DOWN);
+            }
+
+        }
+
+
+        public void prey(object sender, RoutedEventArgs e)
+        {
+            // 取得主要螢幕的解析度
+            var screenWidth = SystemParameters.PrimaryScreenWidth;
+            var screenHeight = SystemParameters.PrimaryScreenHeight;
+
+            // 計算正中央的座標
+            int centerX = (int)(screenWidth / 2);
+            int centerY = (int)(screenHeight / 2);
+
+            // 移動滑鼠
+            SetCursorPos(centerX, centerY);
+            // 模擬滑鼠左鍵點擊
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
+
+            while (true)
+            {
+                UseBuff(VK_B);
+                Thread.Sleep(20000);
+                ArmyReturnTop_ClickMarketButton_ForDesktop();
+                Thread.Sleep(10000);
+                ArmyReturnTop_LeaveGlobalMarket();
+
+            }
+        }
+
+
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
+        //-----------------------------------------------------------------------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------------------------------------
 
 
@@ -594,6 +677,31 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
             keybd_event(VK_UP, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
 
         }
+
+        public void FlashMoveHolyLight(int time, byte direct)
+        {
+
+            keybd_event(VK_V, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero); // Key Down
+            keybd_event(VK_D, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero); // Key Down
+            keybd_event(direct, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero); // Key Down
+            Thread.Sleep(time);
+            keybd_event(VK_V, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
+            keybd_event(VK_D, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
+            keybd_event(direct, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
+
+        }
+
+        public void UseBuff(byte key)
+        {
+            keybd_event(VK_B, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero); // Key Down
+            Thread.Sleep(1000);
+            keybd_event(VK_B, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
+        }
+
+
+
+
+
     }
 }
 

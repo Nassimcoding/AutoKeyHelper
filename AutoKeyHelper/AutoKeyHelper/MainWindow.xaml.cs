@@ -87,6 +87,18 @@ namespace AutoKeyHelper
             var test = new MouseMoveAndClickAndKeyBoardClickSample();
             test.ZombieMine2_v1(sender, e);
         }
+        
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            var test = new MouseMoveAndClickAndKeyBoardClickSample();
+            test.ToyCityCloudDeck(sender, e);
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            var test = new MouseMoveAndClickAndKeyBoardClickSample();
+            test.prey(sender, e);
+        }
 
 
 
