@@ -536,7 +536,7 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
             while (true)
             {
                 UseBuff(VK_B);
-                Thread.Sleep(20000);
+                Thread.Sleep(3000);
                 ArmyReturnTop_ClickMarketButton_ForDesktop();
                 Thread.Sleep(10000);
                 ArmyReturnTop_LeaveGlobalMarket();
