@@ -11,10 +11,10 @@
         <Button Content="Camp1"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
-                Click="MoveMouseToCenter_Click" Margin="10,10,0,0" Height="74" Width="92"/>
+                Click="MoveMouseToCenter_Click" Margin="11,185,0,0" Height="48" Width="66"/>
 
-        <Button Content="MarketTest" HorizontalAlignment="Left" Margin="160,10,0,0" VerticalAlignment="Top" Click="MoveMouseToMarketTest" Height="74" Width="112"/>
-        <Button Content="CanvasTest" HorizontalAlignment="Left" Height="74" Margin="277,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="108" Click="CanvasAddTrangleTest">
+        <Button Content="MarketTest" HorizontalAlignment="Left" Margin="83,286,0,0" VerticalAlignment="Top" Click="MoveMouseToMarketTest" Height="42" Width="68"/>
+        <Button Content="CanvasTest" HorizontalAlignment="Left" Height="42" Margin="83,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="68" Click="CanvasAddTrangleTest">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="1"/>
@@ -24,18 +24,28 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Metrol3" HorizontalAlignment="Left" Height="65" Margin="11,89,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.58,0.638" Click="Button_Click_2" Width="91"/>
+        <Button Content="Metrol3" HorizontalAlignment="Left" Height="42" Margin="11,238,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.58,0.638" Click="Button_Click_2" Width="67"/>
 
         <ScrollViewer HorizontalScrollBarVisibility="Auto"
               VerticalScrollBarVisibility="Disabled"
-              Height="200" Width="400" Margin="160,121,22,47">
+              Height="200" Width="400" Margin="172,159,10,12">
             <Canvas x:Name="MainCanvas" Background="LightGray" Height="200" Width="800"/>
         </ScrollViewer>
-        <Button x:Name="StartGetPoint" Content="Button" HorizontalAlignment="Left" Height="63" Margin="11,159,0,0" VerticalAlignment="Top" Width="91" Click="StartGetPoint_Click"/>
-        <TextBox x:Name="WritingB" HorizontalAlignment="Left" Height="95" Margin="11,227,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="328"/>
-        <Button Content="Button" HorizontalAlignment="Left" Height="74" Margin="107,10,0,0" VerticalAlignment="Top" Width="48" Click="Button_Click_1"/>
-        <Button Content="Toy2" HorizontalAlignment="Left" Height="74" Margin="390,10,0,0" VerticalAlignment="Top" Width="56" Click="Button_Click_3"/>
-        <Button Content="buff5" Margin="451,10,68,287" Click="Button_Click_4"/>
+        <Button x:Name="StartGetPoint" Content="vision" HorizontalAlignment="Left" Height="42" Margin="11,286,0,0" VerticalAlignment="Top" Width="66" Click="StartGetPoint_Click"/>
+        <TextBox x:Name="WritingB" HorizontalAlignment="Left" Height="31" Margin="11,328,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="280"/>
+        <Button Content="zombie1" HorizontalAlignment="Left" Height="42" Margin="11,138,0,0" VerticalAlignment="Top" Width="66" Click="Button_Click_1"/>
+        <Button Content="Toy2" HorizontalAlignment="Left" Height="48" Margin="83,185,0,0" VerticalAlignment="Top" Width="68" Click="Button_Click_3"/>
+        <Button Content="sDPrey" Margin="84,137,431,191" Click="Button_Click_4"/>
+        <Button Content="DPrey" Margin="11,10,504,318" Click="Button_Click_5"/>
+        <Button Content="LPrey" Margin="84,10,431,318"/>
+        <Button Content="FPrey" Margin="156,10,359,318"/>
+        <Label Content="Inputkeys" HorizontalAlignment="Left" Height="27" Margin="172,68,0,0" VerticalAlignment="Top" Width="79" RenderTransformOrigin="-1.68,2.236"/>
+        <TextBox x:Name="InputKeys1" HorizontalAlignment="Left" Height="22" Margin="172,95,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="130"/>
+        <TextBox x:Name="LoopTime1" HorizontalAlignment="Left" Height="22" Margin="335,96,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="130"/>
+        <Label Content="LoopTime(Secind)" HorizontalAlignment="Left" Height="27" Margin="335,69,0,0" VerticalAlignment="Top" Width="130"/>
+        <Label Content="Resolution" HorizontalAlignment="Left" Height="27" Margin="11,60,0,0" VerticalAlignment="Top" Width="79"/>
+        <RadioButton x:Name="option1920" Content="1920X1080" GroupName="ResolutionM" HorizontalAlignment="Left" Height="20" Margin="11,87,0,0" VerticalAlignment="Top" Width="88" IsChecked="True"/>
+        <RadioButton x:Name="option1280" Content="1280X720" GroupName="ResolutionM" HorizontalAlignment="Left" Height="20" Margin="11,107,0,0" VerticalAlignment="Top" Width="88" RenderTransformOrigin="0.49,1.995"/>
 
 
 

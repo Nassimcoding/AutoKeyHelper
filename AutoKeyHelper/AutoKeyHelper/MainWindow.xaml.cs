@@ -29,6 +29,9 @@ namespace AutoKeyHelper
         public MainWindow()
         {
             InitializeComponent();
+            option1920.IsChecked = true;
+            InputKeys1.Text = "";
+            LoopTime1.Text = "240";
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -46,11 +49,11 @@ namespace AutoKeyHelper
             //ReleaseKey(0x5A);
         }
 
-        
+
         private void MoveMouseToCenter_Click(object sender, RoutedEventArgs e)
         {
             var test = new MouseMoveAndClickAndKeyBoardClickSample();
-            test.ScriptTest1(sender,e);
+            test.ScriptTest1(sender, e);
         }
 
         private void MoveMouseToMarketTest(object sender, RoutedEventArgs e)
@@ -87,7 +90,7 @@ namespace AutoKeyHelper
             var test = new MouseMoveAndClickAndKeyBoardClickSample();
             test.ZombieMine2_v1(sender, e);
         }
-        
+
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             var test = new MouseMoveAndClickAndKeyBoardClickSample();
@@ -98,6 +101,38 @@ namespace AutoKeyHelper
         {
             var test = new MouseMoveAndClickAndKeyBoardClickSample();
             test.prey(sender, e);
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            //time process
+            string timetemp = LoopTime1.Text;
+            int time;
+            bool parsesucces = int.TryParse(timetemp, out time);
+            Console.WriteLine("parse time : " + parsesucces);
+            if (!parsesucces)
+            {
+                MessageBox.Show("Time parse fail please input number, or use default 240");
+                LoopTime1.Text = "240";
+                time = 240;
+            }
+            // inputkey process
+            string inputkeys = InputKeys1.Text;
+            inputkeys = inputkeys.ToUpper();
+            //process resolution
+            bool r1920 = true;
+            if (option1920.IsChecked == true)
+            {
+                r1920 = true;
+            }
+            else
+            {
+                r1920 = false;
+            }
+
+
+            var test = new MouseMoveAndClickAndKeyBoardClickSample();
+            test.SandPDPrey(sender, e, r1920, inputkeys, time);
         }
 
 

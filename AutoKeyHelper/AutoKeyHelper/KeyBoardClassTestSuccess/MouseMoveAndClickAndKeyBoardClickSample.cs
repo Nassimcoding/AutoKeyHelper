@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace AutoKeyHelper.KeyBoardClassTestSuccess
 {
@@ -28,19 +29,71 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         private const uint KEYEVENTF_KEYDOWN = 0x0000;
         private const uint KEYEVENTF_KEYUP = 0x0002;
         private const byte VK_RETURN = 0x0D; // Enter 鍵的虛擬鍵碼
-        private const byte VK_Z = 0x5A; // Z 鍵的虛擬鍵碼
-        private const byte VK_V = 0x56; // C 鍵的虛擬鍵碼
-        private const byte VK_D = 0x44; // D 鍵的虛擬鍵碼
-        private const byte VK_C = 0x43; // C 鍵的虛擬鍵碼
+
+        private const byte VK_A = 0x41; // A 鍵的虛擬鍵碼
         private const byte VK_B = 0x42; // B 鍵的虛擬鍵碼
+        private const byte VK_C = 0x43; // C 鍵的虛擬鍵碼
+        private const byte VK_D = 0x44; // D 鍵的虛擬鍵碼
+        private const byte VK_E = 0x45; // E 鍵的虛擬鍵碼
+        private const byte VK_F = 0x46; // F 鍵的虛擬鍵碼
+        private const byte VK_G = 0x47; // G 鍵的虛擬鍵碼
+        private const byte VK_H = 0x48; // H 鍵的虛擬鍵碼
+        private const byte VK_I = 0x49; // I 鍵的虛擬鍵碼
+        private const byte VK_J = 0x4A; // J 鍵的虛擬鍵碼
+        private const byte VK_K = 0x4B; // K 鍵的虛擬鍵碼
+        private const byte VK_L = 0x4C; // L 鍵的虛擬鍵碼
+        private const byte VK_M = 0x4D; // M 鍵的虛擬鍵碼
+        private const byte VK_N = 0x4E; // N 鍵的虛擬鍵碼
+        private const byte VK_O = 0x4F; // O 鍵的虛擬鍵碼
+        private const byte VK_P = 0x50; // P 鍵的虛擬鍵碼
+        private const byte VK_Q = 0x51; // Q 鍵的虛擬鍵碼
+        private const byte VK_R = 0x52; // R 鍵的虛擬鍵碼
+        private const byte VK_S = 0x53; // S 鍵的虛擬鍵碼
+        private const byte VK_T = 0x54; // T 鍵的虛擬鍵碼
+        private const byte VK_U = 0x55; // U 鍵的虛擬鍵碼
+        private const byte VK_V = 0x56; // V 鍵的虛擬鍵碼
+        private const byte VK_W = 0x57; // W 鍵的虛擬鍵碼
+        private const byte VK_X = 0x58; // X 鍵的虛擬鍵碼
+        private const byte VK_Y = 0x59; // Y 鍵的虛擬鍵碼
+        private const byte VK_Z = 0x5A; // Z 鍵的虛擬鍵碼
+
+        private const byte VK_0 = 0x30; // 0 鍵的虛擬鍵碼
+        private const byte VK_1 = 0x31; // 1 鍵的虛擬鍵碼
+        private const byte VK_2 = 0x32; // 2 鍵的虛擬鍵碼
+        private const byte VK_3 = 0x33; // 3 鍵的虛擬鍵碼
+        private const byte VK_4 = 0x34; // 4 鍵的虛擬鍵碼
+        private const byte VK_5 = 0x35; // 5 鍵的虛擬鍵碼
+        private const byte VK_6 = 0x36; // 6 鍵的虛擬鍵碼
+        private const byte VK_7 = 0x37; // 7 鍵的虛擬鍵碼
+        private const byte VK_8 = 0x38; // 8 鍵的虛擬鍵碼
+        private const byte VK_9 = 0x39; // 9 鍵的虛擬鍵碼
 
         private const byte VK_UP = 0x26;
         private const byte VK_DOWN = 0x28;
         private const byte VK_RIGHT = 0x27;
         private const byte VK_LEFT = 0x25;
 
+        private bool isRunning = false;             // 旗標：是否正在執行
+        private CancellationTokenSource cts = null; // 停止用
 
 
+
+
+
+        private static readonly Dictionary<char, byte> _virtualKeyMap = new Dictionary<char, byte>
+        {
+            // 英文字母 A-Z
+            {'A', 0x41}, {'B', 0x42}, {'C', 0x43}, {'D', 0x44}, {'E', 0x45},
+            {'F', 0x46}, {'G', 0x47}, {'H', 0x48}, {'I', 0x49}, {'J', 0x4A},
+            {'K', 0x4B}, {'L', 0x4C}, {'M', 0x4D}, {'N', 0x4E}, {'O', 0x4F},
+            {'P', 0x50}, {'Q', 0x51}, {'R', 0x52}, {'S', 0x53}, {'T', 0x54},
+            {'U', 0x55}, {'V', 0x56}, {'W', 0x57}, {'X', 0x58}, {'Y', 0x59},
+            {'Z', 0x5A},
+
+            // 數字 0-9
+            {'0', 0x30}, {'1', 0x31}, {'2', 0x32}, {'3', 0x33}, {'4', 0x34},
+            {'5', 0x35}, {'6', 0x36}, {'7', 0x37}, {'8', 0x38}, {'9', 0x39},
+        };
 
         public void MouseAndKeyboardTest(object sender, RoutedEventArgs e)
         {
@@ -545,6 +598,70 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
         }
 
 
+
+
+        public void SandPDPrey(object sender, RoutedEventArgs e, bool r1920 = true, string inputkeys = "", int seconds = 240)
+        {
+            if (!isRunning)
+            {
+                // 啟動
+                isRunning = true;
+                cts = new CancellationTokenSource();
+                Task.Run(() => DPrey(sender, e, cts.Token, r1920, inputkeys, seconds));
+
+            }
+            else
+            {
+                // 停止
+                isRunning = false;
+                cts.Cancel();
+
+            }
+
+
+        }
+        public void DPrey(object sender, RoutedEventArgs e, CancellationToken token, bool r1920 = true, string inputkeys = "", int seconds = 240)
+        {
+            // 取得主要螢幕的解析度
+            var screenWidth = SystemParameters.PrimaryScreenWidth;
+            var screenHeight = SystemParameters.PrimaryScreenHeight;
+
+            // 計算正中央的座標
+            int centerX = (int)(screenWidth / 2);
+            int centerY = (int)(screenHeight / 2);
+
+            // 移動滑鼠
+            SetCursorPos(centerX, centerY);
+            // 模擬滑鼠左鍵點擊
+            mouse_event(MOUSEEVENTF_LEFTDOWN, 0, 0, 0, UIntPtr.Zero);
+            mouse_event(MOUSEEVENTF_LEFTUP, 0, 0, 0, UIntPtr.Zero);
+
+            try
+            {
+                while (!token.IsCancellationRequested)
+                {
+                    LoopUseBuff(inputkeys);
+                    Thread.Sleep(3000);
+                    if (r1920)
+                    {
+                        ArmyReturnTop_ClickMarketButton_ForDesktop();
+                    }
+                    else
+                    {
+                        ArmyReturnTop_ClickMarketButton_ForLaptop();
+                    }
+                    Thread.Sleep(seconds * 1000);
+                    ArmyReturnTop_LeaveGlobalMarket();
+                }
+            }
+            catch (OperationCanceledException)
+            {
+                // 被停止就直接跳出
+            }
+        }
+
+
+
         //-----------------------------------------------------------------------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------------------------------------
         //-----------------------------------------------------------------------------------------------------------------------------
@@ -698,7 +815,16 @@ namespace AutoKeyHelper.KeyBoardClassTestSuccess
             keybd_event(VK_B, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
         }
 
-
+        public void LoopUseBuff(string s)
+        {
+            foreach (var item in s)
+            {
+                byte buff = _virtualKeyMap[item];
+                keybd_event(buff, 0, KEYEVENTF_KEYDOWN, UIntPtr.Zero); // Key Down
+                Thread.Sleep(1000);
+                keybd_event(buff, 0, KEYEVENTF_KEYUP, UIntPtr.Zero);   // Key Up
+            }
+        }
 
 
 
